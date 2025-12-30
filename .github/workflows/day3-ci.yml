@@ -1,0 +1,30 @@
+name: Day 3 Practice CI
+
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  practice-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print learning message
+        run: echo "Practicing GitHub Actions Day 3"
+
+      - name: Show OS info
+        run: uname -a
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List repository files
+        run: ls -la
+
+      - name: Finish practice
+        run: echo "Day 3 practice completed successfully"
